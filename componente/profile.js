@@ -93,7 +93,7 @@ export const profileDom = () => {
   const generatePostUser = (post) => {
     const likeActive = post.data().likes.includes(getCurrentUser().uid);
     const userImage = post.data().photoUser !== null ? post.data().photoUser : './imagenes/usuario.png';
-    const postContent = post.data().userId === getCurrentUser().uid ? /*HTML*/ ` 
+    const postContent = post.data().userId === getCurrentUser().uid ? ` 
       <section class="postContainer"> 
         <section class="secc-nombre2">
           <div class="fotoPostPerfil">
