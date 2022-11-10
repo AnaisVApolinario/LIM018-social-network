@@ -1,0 +1,253 @@
+
+.container-modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  /*display:flex*/
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  /*sirve para que este sobreencima de lso elemntos.*/
+}
+/*Dando estilos al input*/
+
+.pre-descrip label{
+  color: rgb(100,100,100);
+  cursor:text;
+  transition: all 0.5s ease-in-out;
+}
+.pre-descrip .input{
+  width: 100%;
+  padding: 20px 0 0;
+  border: 0;
+  border-bottom: 2px solid rgb(200,200,200);
+  outline: 0;
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+/*hacer que nuestra ventana se abra y se cierre*/
+#btn-modal:checked~.container-modal {
+  display: flex;
+}
+
+.content-modal {
+  width:90%;/* width: 100%; Pc */
+  max-width: 400px;
+  padding: 20px;
+  background: #FFF;
+  border-radius: 4px;
+}
+.postModal{
+  height: 70%;
+}
+.content-modal h2 {
+  margin-bottom: 15px;
+}
+
+.content-modal p {
+  padding: 15px 0px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  font-weight: bold;
+}
+
+.content-modal .btn-cerrar {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label {
+  padding: 7px 10px;
+  background: #5488a3;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+  background: #185E83;
+}
+
+/*Home modal*/
+.tituloPublicacion{
+  display:flex;
+  justify-content: space-between;
+}
+.btn-cerrarRed{
+  cursor: pointer;
+  background: #d85a43;
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+}
+.btn-cerrarRed:hover{
+  background:#ec2806;
+}
+.btn-cerrarRed i{
+  display: flex;
+  justify-content: center;
+}
+/*Modal de Editar Perfil*/
+.editarP{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom:  solid #dbdbdb;
+}
+.foto-perfil{
+  border-radius: 50%;
+  background: thistle;
+  width: 30%;
+}
+.foto-perfil img{
+  width:100%;
+  border-radius: 50%;
+}
+.editarP span{
+  color:#0c77b1;
+  font-size: 13px;
+}
+.tituloEditar{
+  display: flex;
+  justify-content: space-between;
+}
+/* .cerrarSesion{
+  display:flex;
+} */
+.btn-sesion{
+  color: white;
+  background: red;
+  border-radius: 11px;
+  width: 100%;
+}
+.btn-guardarVerde{
+  cursor: pointer;
+  background: #82dd37;
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+}
+.btn-guardarVerde:hover{
+  background:#09d109;
+}
+.btn-guardarVerde i{
+  display: flex;
+  justify-content: center;
+}
+/* .pre-descrip{
+  display: flex;
+  justify-content: space-between;
+  height: 90px;height: 100px;
+}
+.pre-descrip textarea{
+  width: 65%;
+}
+.nombrePerfil{
+  font-size: 13px;
+  color:rgba(0, 0, 0, 0.39);
+} */
+/*postContainer*/
+.postContainer{
+  height: 55%;
+}
+.descripcion{
+  background-color: #94B49F;
+  height: 70%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.imgSeleccionada{
+  width:50%;
+}
+.textArea{
+  width: 100%;
+  height: 80%;
+  /* width:60%;
+  height:200px; */
+}
+.botonesPost{
+  display:flex;
+  justify-content: space-around;
+}
+.botonesPost button{
+  display:flex;
+}
+.botonesPost a{
+  text-decoration: none;
+}
+
+/*MODAL DE VERIFICACION*/
+.modalContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalVerification {
+  max-width: 20rem;
+  max-height: 30rem;
+  overflow: hidden;
+  background-image: url(./imagenes/animals.jpg);
+  background-size: contain;
+  box-shadow: 0px 6px 6px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalVerification img {
+  width: 30%;
+  align-content: center;
+}
+
+.modalVerification p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.modalButton {
+  background: rgb(3, 3, 3);
+  color:white;
+  font-weight: 600;
+  font-size: 0.7rem;
+  width: 5rem;
+  height: 1.5rem;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.modalButton:hover {
+  background: rgb(94, 252, 3);
+  color:#000;
+  font-weight: 600;
+}
+
+.reveilModal {
+  display: flex;
+}

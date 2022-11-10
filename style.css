@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Josefin+Sans:wght@300&family=Koulen&family=Lora:ital,wght@1,700&family=Merriweather:wght@300&family=Poppins:wght@300;400;500;600;700&family=Shadows+Into+Light&family=Zen+Loop&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  /* height:100vh;
+  background-color: #e9e6e1; */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagenes/fondoGreen.jpg);
+  background-size: cover; */
+}
+
+.form{
+  background-color: #3A8891;
+  /* background: url('imagenes/verde.png');
+  background-size: contain;
+  background-repeat: round; */
+  padding:25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: inherit;
+}
+.register form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo{
+  width:80%;
+  margin-left: 45px;
+  display: flex;
+}
+.form figure img{
+  width: 100%;
+}
+.logoRegistro{
+  display: flex;
+  align-items: stretch;
+  margin:40px 0 0 0;
+}
+/*Campos de entrada*/
+.campo-entrada{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+.campo-entrada input::placeholder { 
+  color: #A9AF7E; 
+}
+/*ocultas el rectangulo del campo de entrada*/
+.campo-entrada input{
+  height:100%;
+  width:100%;
+  padding: 0 35px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size:16px;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid transparent;
+}
+/*Activar las lineas azules al presionar un input*/
+.campo-entrada input:is(:focus, :valid){
+  border-bottom-color: #3af588;
+}
+/*Iconos*/
+.campo-entrada i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 23px;
+  background-color: transparent;
+  left: 3px;
+}
+.campo-entrada i.icon{
+  left:0;
+}
+.campo-entrada i.showHidePw{
+  left: auto;
+  right:0;/*icono del ojo*/
+}
+.login-registrar{
+  display: flex;
+}
+span.text{
+  color: rgb(229 233 0);
+}
+.text{
+  display: flex;
+  justify-content: flex-end;/*olvidaste la contraseña*/
+  margin-top:20px;
+}
+/*Links*/
+.form a.text{
+  color: #f3f3f3;
+  text-decoration: none;
+}
+.form a.text:hover{
+  text-decoration: underline;
+}
+/*Button*/
+.campo-entrada__boton{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.campo-entrada__boton button{
+  width: 100%;
+  border:none;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  cursor:pointer;
+}
+.campo-entrada__boton #btn-login, #btn-registrar{
+  color: #000000;
+  background-color: #E6E5A3;
+}
+.campo-entrada__boton #btn-google{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #E6E5A3;
+  margin-top: 15px;
+  /* height: 40%; */
+}
+.campo-entrada__boton #btn-google img{
+  width: 25px;
+}
+.campo-entrada__boton input:hover{
+  background-color: #000;
+}
+.container{
+  /* background-color: #3A8891; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagenes/fondoGreen.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.seccionPrincipal{
+  margin: auto;
+  /* max-width: 800px; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imagenes/fondoGreen.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.seccVeterinaria{
+  height: 100vh;
+}
+/*Cabecera*/
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+}
+.logo-top{
+  width: 130px;
+  max-width: 100%;
+  height: 34px;
+  left: 7px;
+  top: 14px;
+}
+#agregar{
+  display: flex;
+  align-items: center;
+}
+.header .btn-img img{
+  width: 25px;
+  max-width:100%;
+  height: 25px;
+  left: 260px;
+  top: 18px;
+  cursor: pointer;
+}
+
+#agregar p {
+  font-weight: 500;
+  padding-right: 10px;
+}
+.secc-nombre{
+  background-color: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+}
+.descripcion{
+  height: 70%;
+  margin-bottom: 10px;
+}
+.descripcion-texto{
+  font-weight: 500;
+  padding: 4px;
+  border-bottom: solid 1px #00000052;
+  margin-bottom: 8px
+}
+.secc-nombre div img , .secc-nombre2 .fotoPostPerfil img{
+  display: flex;
+  width: 35px;
+  max-width: 100%;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 0 10px 0 10px;
+}
+#nameFecha{
+  display: flex;
+  flex-direction: column;
+}
+/*Perfil botones en el post de Editar y Eliminar*/
+.secc-nombre2{
+  background-color: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+}
+.btnEditarEliminar{
+  display: flex;
+}
+#nameBtns{
+  display:flex;
+  justify-content: space-between;
+}
+#nameBtns span img{
+  width:25px;
+  max-width:100%;
+}
+.postHeaderPerfil{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.btnEditarBorrar{
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+.deleteButton{
+  cursor:pointer;
+}
+/*Foto y seccion de me gusta*/
+.secc-publicacionFoto{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imagen{
+  background-color: rgb(182, 175, 153);
+  height: 200px;/* height: 80%; */
+}
+.spanLikeComent{
+ display: flex;
+ justify-content: space-between;
+}
+.spanLike{
+  max-width: 120px;
+}
+.like img{
+  width: 30px;
+}
+.like{
+  cursor: pointer;
+  padding: 0px;
+  background-color: transparent;
+  border:none;
+}
+/*Descripccion*/
+.secc-descripcion{
+  padding: 0px 5px 5px 5px;
+}
+.cantidad-likes{
+  font-weight: bold;
+  margin: 3px 0 0 0;
+  color: sienna;
+}
+.nombre{
+  margin:4px 0px;
+}
+.nombre__span{
+  font-weight: bold;
+  padding-right: 5px;
+}
+.tiempo{
+  margin:4px 0px;
+}
+.tiempo, .comentarios{
+  color: rgba(0, 0, 0, 0.6);
+}
+/*FOOTER*/
+.menu{
+  width: 800px;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.menuInferior{
+  display: flex;
+  justify-content: space-evenly;
+  background: #a8c5ba;
+  padding-top: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.39);
+}
+.menuInferior img{
+  width: 25px;
+  max-width: 100%;
+  height: 25px;
+}
+/* perfil  */
+.logo-perfil{
+  display: flex;
+  justify-content: flex-end;
+}
+.logo-perfil a img{
+  width: 30px;
+  max-width:100%;
+  margin-top: 8px;
+}
+.logo-perfil a{
+  padding-right: 10px;
+}
+.veterinaria{
+  background-color: #3A8891;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.veterinaria p{
+  color:white;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.secc-perfilName{
+  background-color: #3A8891;
+  color: white;
+}
+.secc-perfilName div img {
+  display: flex;
+  width: 50px;
+  max-width:100%;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+#perfilPerson{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.userInfo{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.userInfo p {
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.editProfile{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  padding-top: 10px;
+}
+.editProfile button{
+  align-items: center;
+  background-color: #DEF5E5;;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 16px;
+}
+
+.menuIntermedio{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+  background-color: #3a8891;
+  height: 20px;
+  margin-top: 10px;
+}
+
+/*SERVICIOS*/
+.servicioContainer{
+  display: flex;
+}
+.div-veterinaria{
+  padding: 8px;
+  border-bottom:1px solid #000000;
+  cursor: pointer;
+}
+.div-veterinaria .nombre{
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.div-veterinaria .lugar{
+  font-size:13px;
+  letter-spacing: 4px;
+}
+/*Input File*/
+#fichero{
+  display: none;
+}
+.input-fileProfile{
+  display: flex;
+  align-items: center;
+  background-color: #BCEAD5;
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+/*Fianl del input File*/
+
+/*Post container*/
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: #e4e9e5;
+  margin: 5px 0px;
+  padding: 10px;
+}
+.post-imagen-msj{
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+}
+
+.perfil, .inicio, .servicios {
+    width: 800px;
+    background-color: #fff;
+}
+/*WELCOME*/
+.welcome{
+  /* background-color: #3A8891; */
+  background-image:linear-gradient(rgb(0 0 0 / 62%), rgb(0 0 0 / 74%)), url('./imagenes/fondoGreen.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+}
+.imgBienvenida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgBienvenida img{
+  width: 60%;
+}
+.btnsWelcome{
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.logearWelcome{
+  margin-bottom: 15px;
+}
+/*Botones de guardar*/
+#btn-publicar, .guardar {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+ }
+ 
+ #btn-publicar:hover, .guardar:hover {
+  background-color: #1BFD9C;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+ }
+ 
+ #btn-publicar:before, .guardar:before{
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 155, 0) 40%,rgba(27, 253, 155, 0) 60% , transparent 100%);
+ }
+ 
+#btn-publicar:before, .guardar:before {
+  transform: translateX(15em);
+ }
+ /*Fin de los botones de guardar*/
+ .derechaW{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+ }
+ .derechaW p{
+  font-family: 'Poor Story', cursive;
+  font-size: 40px;
+  font-weight: 500;
+  color:white;
+ }
+.parrafoReflexivo{
+  font-family: 'Ephesis', cursive;
+  letter-spacing: 5px;
+  font-size: 30px;
+  color:#fff;
+}
+.logearWelcome{
+  margin-bottom: 20px;
+}
+/*BOTONES welcome*/
+.registrarWelcome, .logearWelcome  {
+  --glow-color: rgb(208, 255, 176);
+  --glow-spread-color: rgba(165, 255, 123, 0.781);
+  --enhanced-glow-color: rgb(232, 255, 206);
+  --btn-color: rgb(61, 136, 86);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .registrarWelcome::after, .logearWelcome::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .registrarWelcome:hover, .logearWelcome:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .registrarWelcome:active, .logearWelcome:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }

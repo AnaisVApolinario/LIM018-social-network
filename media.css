@@ -1,0 +1,42 @@
+@media only screen and (min-width: 600px)  {
+  .postContainer {
+    margin: 20px;
+    border-radius: 30px;
+    padding: 15px;
+  }
+  .form{
+    width: 400px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius:5%;
+  }
+}
+/*Iphone SE*/
+@media only screen and (max-width: 500px)  {
+  .container{
+    height: 100vh;
+  }
+  .campo-entrada{
+    height: 50px;
+  }
+  .campo-entrada__boton{
+    height: 100px;
+  }
+  .campo-entrada input{
+    height: 100%;
+  }
+  .welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .derechaW p {
+    font-family: 'Ephesis', cursive;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+  }
+}
