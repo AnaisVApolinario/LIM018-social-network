@@ -6,7 +6,8 @@ export const servicioView = () => {
   <section class="servicios">
   <header class="logo-perfil veterinaria">
   <p>Nuevo Servicio</p>
-  <a href =""><img src="imagenes/agregarFoto.png"></a>
+  <img src="imagenes/agregarFoto.png">
+  <!--<a href =""><img src="imagenes/agregarFoto.png"></a>-->
 </header>
     <section class="serviciosContainer">
       <div class="div-veterinaria">

@@ -13,7 +13,8 @@ export const profileView = () => {
   const profile = /* html */ ` 
   <section class="perfil">
     <header class="logo-perfil">
-      <a href =""><img src="imagenes/bar.png"></a>
+    <img src="imagenes/bar.png">
+      <!--<a href =""><img src="imagenes/bar.png"></a>-->
     </header>
     <section class="secc-perfilName">
     </section>

@@ -232,6 +232,7 @@ span.text{
 #nameBtns span img{
   width:25px;
   max-width:100%;
+  cursor: pointer;
 }
 .postHeaderPerfil{
   display: flex;
@@ -319,14 +320,15 @@ span.text{
   display: flex;
   justify-content: flex-end;
 }
-.logo-perfil a img{
+.logo-perfil img{ /*a*/
   width: 30px;
   max-width:100%;
-  margin-top: 8px;
+  margin: 7px;
+  cursor: pointer;
 }
-.logo-perfil a{
+/* .logo-perfil a{
   padding-right: 10px;
-}
+} */
 .veterinaria{
   background-color: #3A8891;
   height: 50px;
@@ -376,6 +378,7 @@ span.text{
   border-radius: 10px;
   width: 70%;
   font-size: 16px;
+  cursor:pointer;
 }
 
 .menuIntermedio{
