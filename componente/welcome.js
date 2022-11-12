@@ -2,7 +2,7 @@ export const welcomeView = () => {
   const welcome = /* Html */`
   <section class="welcome">
     <div class="imgBienvenida">
-      <img src="imagenes/loginCompleto.png" alt="perros abrazandose">
+      <img src="imagenes/loginCompleto.png" alt="perros abrazandose" class="imgWelcome">
     </div>
       <span class="derechaW">
         <p class="parrafoPrincipal">¡ Somos una comunidad de animalistas!</p>

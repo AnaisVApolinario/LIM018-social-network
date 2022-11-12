@@ -521,6 +521,9 @@ span.text{
 .logearWelcome{
   margin-bottom: 20px;
 }
+.imgWelcome{
+  filter: drop-shadow(5px 5px 10px white);
+}
 /*BOTONES welcome*/
 .registrarWelcome, .logearWelcome  {
   --glow-color: rgb(208, 255, 176);
