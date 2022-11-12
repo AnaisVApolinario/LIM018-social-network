@@ -1,6 +1,6 @@
 import { signUpWithEmail, emailVerification, completeUserInfo } from '../firebaseconfig/auth.js';
 import { userInfoFirestore } from '../firebaseconfig/post.js';
-import { validateEmpty } from './utils.js';
+import { validateEmpty, showError } from './utils.js';
 
 export const registroview = () => {
   const registro = /* html */`
@@ -40,7 +40,7 @@ export const registroview = () => {
         </div>
       </div>
       <div class='modalContainer'>
-      <div class='modal'>
+      <div class='modalVerification entradaR'>
         <img src='./imagenes/verificacion.jpg'>
         <p>Se envió un código de verificación a su correo electrónico</p>
         <button class='modalButton'>Aceptar</button>
@@ -93,10 +93,10 @@ export const registroDom = () => {
       })
       .catch((error) => {
         if (error.code === 'auth/email-already-in-use') {
-          alertEmail.textContent = 'Email existente, prueba con otro';
+          showError(alertEmail, 'Email existente, prueba con otro');
         }
         if (error.code === 'auth/weak-password') {
-          alertPassword.textContent = 'La contraseña debe tener al menos 6 caracteres';
+          showError(alertEmail, 'La contraseña debe tener al menos 6 caracteres');
         }
       });
     closeModal.addEventListener('click', () => {

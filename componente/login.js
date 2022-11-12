@@ -1,6 +1,6 @@
 import { logInWithEmail, signUpWithGmail, GoogleAuthProvider } from '../firebaseconfig/auth.js';
 import { userInfoFirestore } from '../firebaseconfig/post.js';
-import { validateEmpty } from './utils.js';
+import { validateEmpty, showError } from './utils.js';
 
 export const loginview = () => {
   const login = /* html */ `
@@ -31,7 +31,7 @@ export const loginview = () => {
           </div>
         </form>
         <div class='modalContainer'>
-          <div class='modalVerification'>
+          <div class='modalVerification salidaL'>
             <p>Cuenta no verificada, porfavor revise su bandeja de correo electrónico</p>
             <button class='modalButton'>Aceptar</button>
           </div>
@@ -72,13 +72,13 @@ export const loginDom = () => {
       })
       .catch((error) => {
         if (error.code === 'auth/user-not-found') {
-          alertGmail.textContent = 'Email incorrecto';
+          showError(alertGmail, 'Email incorrecto');
         }
         if (error.code === 'auth/wrong-password') {
-          alertPassword.textContent = 'Contraseña incorrecta';
+          showError(alertPassword, 'Contraseña incorrecta');
         }
         if (error.code === 'auth/user-disabled') {
-          alertGmail.textContent = 'Usuario deshabilitado';
+          showError(alertPassword, 'Usuario Deshabilitado');
         }
       });
   });
